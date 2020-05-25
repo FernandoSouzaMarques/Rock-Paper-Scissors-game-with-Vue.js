@@ -1,0 +1,36 @@
+.m-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: em(45);
+  padding: em(18) em(20) em(16) em(28);
+  max-width: em(700);
+  border: solid em(4) $header-outline;
+  border-radius: em(20);
+}
+
+.m-header_game {
+  font-size: em(38);
+  font-weight: $fontweight.semibold;
+  margin-top: em(4, 38);
+  letter-spacing: em(1.5,38);
+  line-height: em(33,38);
+}
+
+.m-header_score {
+  background-color: $white;
+  width: em(150);
+  height: em(114);
+  border-radius: em(10);
+  text-align: center;
+  color: $score-text;
+  padding: em(15) em(10);
+  letter-spacing: em(2)
+
+  & .score {
+    display: block;
+    font-size: em(60);
+    line-height: em(65, 60);
+    color: $dark-text;
+  }
+}
