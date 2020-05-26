@@ -1,13 +1,51 @@
-.m-rules {
+.m-rules_overlay {
+  background-color: $overlay;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 1;
 }
+
 .m-rules_modal {
-  display: none;
-  opacity: 0;
+  background-color: $white;
+  position: absolute;
+  width: em(400);
+  height: em(420);
+  border-radius: em(10);
+  padding: em(15) em(26) em(15) em(32);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.m-rules_modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.m-rules_modal-title {
+  color: $dark-text;
+  font-size: em(32);
+  line-height: em(20, 32);
+}
+
+.m-rules_modal-close {
+  background: transparent;
+  border: none;
+
+  &::before {
+    icon("close");
+    font-size: em(22);
+    color: $header-outline;
+  }
+}
+
+.m-rules_modal-content {
+  margin-top: em(28);
+  text-align: center;
 }
 
 .m-rules_button {
@@ -22,5 +60,4 @@
   border-radius: em(10, 15);
   bottom: em(30, 15);
   right: em(30, 15);
-
 }
