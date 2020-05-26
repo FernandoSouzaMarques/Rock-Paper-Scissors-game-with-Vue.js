@@ -1,0 +1,93 @@
+.m-game {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: em(60);
+  position: relative;
+  
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: em(300);
+    height: em(300);
+    background-image: url('../assets/bg-triangle.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: calc(50% + 30px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.m-game_action {
+  width: em(240);
+  height: em(240);
+  border-radius: 50%;
+  border: none;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: em(180);
+    height: em(172);
+    margin-top: em(5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: $white;
+    box-shadow: 0 em(-9) 0 0 #dbd9da;
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: em(96);
+    color: $dark-text;
+    z-index: 1;
+  }
+
+  &.-scissors {
+    background-image: $scissors-gradient;
+    box-shadow: 0 9px 0 0 $scissors;
+    &:after {
+      icon("scissors");
+    }
+  }
+
+  &.-paper {
+    background-image: $paper-gradient;
+    box-shadow: 0 8px 0 0 $paper;
+    &:after {
+      icon("paper");
+    }
+  }
+
+  &.-rock {
+    background-image: $rock-gradient;
+    box-shadow: 0 8px 0 0 $rock;
+    &:after {
+      icon("rock");
+    }
+  }
+}
+
+.m-game_group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &.-one {
+    justify-content: center;
+    margin-top: em(28);
+  }
+  &.-two {
+    max-width: em(480);
+  }
+}

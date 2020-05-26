@@ -1,8 +1,12 @@
 <template>
   <div class="m-game">
-    <button>Rock</button>
-    <button>Paper</button>
-    <button>Scissors</button>
+    <div class="m-game_group -two">
+      <button class="m-game_action -paper"></button>
+      <button class="m-game_action -scissors"></button>
+    </div>
+    <div class="m-game_group -one">
+      <button class="m-game_action -rock"></button>
+    </div>
   </div>
 </template>
 

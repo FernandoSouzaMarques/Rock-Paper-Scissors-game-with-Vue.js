@@ -9,7 +9,7 @@
         <img src="@/assets/image-rules.svg" alt="">
       </div>
     </div>
-    <button>Rules</button>
+    <button class="m-rules_button">Rules</button>
   </div>
 </template>
 
