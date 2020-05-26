@@ -1,4 +1,4 @@
-.m-game {
+.m-game_step-1 {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -90,4 +90,46 @@
   &.-two {
     max-width: em(480);
   }
+}
+
+.m-game_step-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: em(670);
+  margin-top: em(70);
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: em(14);
+
+  & .m-game_action {
+    width: em(350);
+    height: em(350);
+  }
+
+  & .m-game_action::before {
+    width: em(270);
+    height: em(260);
+    box-shadow: 0 em(-12) 0 0 #dbd9da;
+  }
+
+  & .m-game_action::after {
+    font-size: em(110);
+  }
+}
+
+.m-game_choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:first-child {
+    margin-right: em(20);
+  }
+}
+
+.m-game_picked {
+  font-size: em(26);
+  letter-spacing: em(2, 26);
+  margin-bottom: em(62, 26);
 }
